@@ -1,15 +1,8 @@
-<!-- Aframeを利用してa-boxを表示させるデモコンテンツを作成したい。
-解説はせずに、コピペで使えるソースコードを用意してください。
-htmlに全てを埋め込む形をとってください。 -->
-
-<!-- 現在のhtmlを使ってar.jsでhiroマーカーを活用したデモコンテンツに変更したい。
-先ほどと同じルールで生成してください。 -->
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>AR.js Hiro Marker Demo</title>
+  <title>AR.js Hiro Marker Image Demo</title>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
@@ -19,11 +12,13 @@ htmlに全てを埋め込む形をとってください。 -->
     arjs="sourceType: webcam; debugUIEnabled: false;"
   >
     <a-marker preset="hiro">
-      <a-box
+      <a-image
+        src="img/card.png"
+        width="1"
+        height="0.6"
         position="0 0.5 0"
-        rotation="0 45 0"
-        color="#4CC3D9"
-      ></a-box>
+        rotation="-90 0 0"
+      ></a-image>
     </a-marker>
 
     <a-entity camera></a-entity>
